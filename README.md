@@ -1,6 +1,6 @@
 # Synthetic Corporate Email Generator
 
-A rapid-prototyping project for the Consilio Labs Senior Data Scientist technical assessment.
+A rapid-prototyping project for the Consilio Labs .
 
 ## Objective
 
@@ -190,7 +190,7 @@ The output JSON contains:
 }
 ```
 
-## Interview explanation
+## explanation
 
 A concise explanation:
 
