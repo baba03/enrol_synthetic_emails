@@ -1,0 +1,99 @@
+{
+  "source": {
+    "from": "william.giuliani@enron.com",
+    "to": "andrew.fastow@enron.com",
+    "date": "2001-06-07 07:48:00",
+    "subject": "Approval of the DPR Accelerated Put transaction",
+    "body": "Dear Andrew,\n\nAttached is the DASH for the approval of the DPR Accelerated Put transaction. This partial divestiture allows us to put $11 million of our equity interest back to DPR Holding Company, LLC, and its subsidiary, Dakota, LLC. Both entities are controlled by Chris Cline.\n\nIn addition to redeeming part of our equity interest, the deal provides us with 900,000 tons of coal priced below market, an option which could lead to a very profitable synfuel project, and the potential for more marketing fees from other Cline entities.\n\nThe DASH has been approved and signed by RAC and JEDI II and is now awaiting Mark Haedicke’s review and approval. I wanted to give you the opportunity to review the DASH and become familiar with the provisions of the deal.\n\nIf you have any questions on the transaction, feel free to contact me at (412) 490-9048. Others familiar with the deal are Mike Beyer, George McClellan, and Wayne Gresham.\n\nThank you.\n\nBest regards,\nBill Giuliani"
+  },
+  "detected_entities": [
+    {
+      "label": "EMAIL",
+      "text": "william.giuliani@enron.com",
+      "start": 6,
+      "end": 32,
+      "source": "regex"
+    },
+    {
+      "label": "EMAIL",
+      "text": "andrew.fastow@enron.com",
+      "start": 37,
+      "end": 60,
+      "source": "regex"
+    },
+    {
+      "label": "DATE",
+      "text": "2001-06-07",
+      "start": 67,
+      "end": 77,
+      "source": "regex"
+    },
+    {
+      "label": "PHONE",
+      "text": "2001-06-07 07",
+      "start": 67,
+      "end": 80,
+      "source": "regex"
+    },
+    {
+      "label": "MONEY",
+      "text": "$11 million",
+      "start": 279,
+      "end": 290,
+      "source": "regex"
+    },
+    {
+      "label": "PHONE",
+      "text": "412) 490-9048",
+      "start": 982,
+      "end": 995,
+      "source": "regex"
+    }
+  ],
+  "mapping": {
+    "william.giuliani@enron.com": "neha.iyer@northstarenergy.com",
+    "andrew.fastow@enron.com": "rajiv.singh@agriindia.com",
+    "2001-06-07": "[SYNTHETIC_DATE]",
+    "2001-06-07 07": "+91-11-0000-0000",
+    "$11 million": "[SYNTHETIC_MONEY]",
+    "412) 490-9048": "+91-11-0000-0000"
+  },
+  "synthetic": "Subject: Synthetic Approval of the DPR Accelerated Put transaction\n\nDear Colleague,\n\nPlease find the attached document for your review. The transaction and related commercial terms have been updated to reflect a different business context while preserving the original request and approval flow.\n\nPlease let me know if you have any questions or require further details.\n\nBest regards,\nRajiv Sharma\nAgriculture India Pvt. Ltd.",
+  "validation": {
+    "leakage": {
+      "leakage_count": 0,
+      "leaked_entities": [],
+      "passed": true
+    },
+    "pii": {
+      "count": 0,
+      "findings": {
+        "email": [],
+        "phone": [],
+        "url": []
+      },
+      "passed": true
+    },
+    "structure": {
+      "source_chars": 975,
+      "synthetic_chars": 425,
+      "length_ratio": 0.436,
+      "paragraphs_source": 7,
+      "paragraphs_synthetic": 5,
+      "sentence_count_source": 9,
+      "sentence_count_synthetic": 5,
+      "length_reasonable": false
+    },
+    "quality": {
+      "score": 5,
+      "max_score": 5,
+      "markers_found": [
+        "dear ",
+        "regards",
+        "best regards",
+        "subject:"
+      ],
+      "note": "Heuristic only; production evaluation should include human review and semantic/LLM-based evaluation."
+    }
+  }
+}
